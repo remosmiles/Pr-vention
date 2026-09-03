@@ -5,11 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bewerbung Dienstchef Präventionsdienste | Remo Tresch</title>
     <style>
-        /* CSS Variablen für elegantes Dark Mode Design */
+        /* CSS Variablen für Kapo Uri Design (Dunkelblau & Gelb) */
         :root {
-            --bg-color: #0f172a; /* Tiefes Dunkelblau/Grau */
+            --bg-color: #0f172a; /* Tiefes Dunkelblau */
             --surface-color: #1e293b;
-            --primary-color: #3b82f6; /* Vertrauensvolles Blau */
+            --primary-color: #facc15; /* Uri Gelb */
+            --primary-dark: #ca8a04;
+            --uri-blue: #1e3a8a; /* Kapo Uri Blau */
             --text-main: #f8fafc;
             --text-muted: #cbd5e1;
             --alert-color: #ef4444; /* Rot für Quick Exit */
@@ -30,8 +32,7 @@
             scroll-behavior: smooth;
         }
 
-        /* Typografie */
-        h1, h2, h3 {
+        h1, h2, h3, h4 {
             font-weight: 600;
             line-height: 1.2;
         }
@@ -40,28 +41,37 @@
             font-size: 2.5rem;
             margin-bottom: 2rem;
             text-align: center;
-            color: var(--text-main);
+            color: var(--primary-color);
         }
 
         /* Header & Hero Section */
         header {
-            height: 100vh;
+            min-height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
             padding: 2rem;
-            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            background: linear-gradient(135deg, #0f172a 0%, var(--uri-blue) 100%);
+            border-bottom: 3px solid var(--primary-color);
+        }
+
+        .logo-container img {
+            width: 150px;
+            height: auto;
+            margin-bottom: 2rem;
+            filter: drop-shadow(0 4px 6px rgba(0,0,0,0.5));
         }
 
         .hero-title {
             font-size: 3.5rem;
             margin-bottom: 1rem;
-            background: -webkit-linear-gradient(45deg, #3b82f6, #60a5fa);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            color: #ffffff;
+        }
+
+        .hero-title span {
+            color: var(--primary-color);
         }
 
         .hero-subtitle {
@@ -75,7 +85,7 @@
             display: inline-block;
             padding: 1rem 2.5rem;
             font-size: 1.1rem;
-            color: #fff;
+            color: var(--bg-color);
             background-color: var(--primary-color);
             border: none;
             border-radius: 50px;
@@ -86,11 +96,10 @@
         }
 
         .btn:hover {
-            background-color: #2563eb;
+            background-color: var(--primary-dark);
             transform: translateY(-3px);
         }
 
-        /* Sektionen Allgemein */
         section {
             padding: 6rem 2rem;
             max-width: 1200px;
@@ -110,15 +119,16 @@
             border-radius: 16px;
             border: 1px solid rgba(255, 255, 255, 0.05);
             transition: transform 0.3s;
+            border-top: 4px solid var(--primary-color);
         }
 
         .card:hover {
             transform: translateY(-10px);
-            border-color: var(--primary-color);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
         }
 
         .card h3 {
-            color: var(--primary-color);
+            color: #ffffff;
             font-size: 1.5rem;
             margin-bottom: 1rem;
         }
@@ -135,6 +145,7 @@
             padding: 4rem 2rem;
             text-align: center;
             margin-top: 2rem;
+            border: 1px solid rgba(255,255,255,0.1);
         }
 
         .contact-numbers {
@@ -160,6 +171,7 @@
 
         .btn-exit {
             background-color: var(--alert-color);
+            color: white;
             margin-top: 2rem;
         }
 
@@ -167,10 +179,41 @@
             background-color: #dc2626;
         }
 
+        /* Kontakt & Profil Box */
+        .profile-header {
+            background-color: var(--uri-blue);
+            padding: 2rem;
+            border-radius: 16px;
+            margin-bottom: 4rem;
+            text-align: center;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .profile-header h3 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .profile-details {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+            color: var(--text-muted);
+            margin-top: 1rem;
+        }
+
+        .profile-details span {
+            background: rgba(0,0,0,0.2);
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+        }
+
         /* Lebenslauf Timeline */
         .timeline {
             position: relative;
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
         }
 
@@ -190,6 +233,7 @@
             position: relative;
             background-color: inherit;
             width: 50%;
+            margin-bottom: 2rem;
         }
 
         .timeline-item::after {
@@ -208,18 +252,26 @@
         .left { left: 0; }
         .right { left: 50%; }
 
-        .right::after {
-            left: -10px;
-        }
+        .right::after { left: -10px; }
 
         .timeline-content {
             padding: 1.5rem;
             background-color: var(--surface-color);
             border-radius: 12px;
+            border-left: 4px solid var(--primary-color);
         }
 
-        .timeline-content h3 {
+        .timeline-date {
             color: var(--primary-color);
+            font-weight: bold;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .timeline-content h4 {
+            color: #ffffff;
+            font-size: 1.3rem;
             margin-bottom: 0.5rem;
         }
 
@@ -235,39 +287,45 @@
 </head>
 <body>
 
+    <!-- Hero Section mit Uri Logo -->
     <header id="hero">
-        <h1 class="hero-title">Sicherheit durch Sichtbarkeit.</h1>
+        <div class="logo-container">
+            <img src="image_e824a1.png" alt="Kapo Uri Logo">
+        </div>
+        <h1 class="hero-title">Sicherheit durch <span>Sichtbarkeit.</span></h1>
         <p class="hero-subtitle">Die digitale Zukunft der Präventionsdienste Uri. Ein modernes Konzept für das KBM, die VSI und das Waffenbüro.</p>
-        <a href="#konzepte" class="btn">Meine Vision entdecken</a>
+        <a href="#konzepte" class="btn">Zur Vision & Bewerbung</a>
     </header>
 
+    <!-- Konzepte Section -->
     <section id="konzepte">
         <h2>Präventionskonzepte</h2>
         <div class="grid-container">
             <div class="card">
                 <h3>KBM & Häusliche Gewalt</h3>
                 <p>Weg von anonymen Flyern, hin zu nahbaren Gesichtern. Das Kantonale Bedrohungsmanagement muss intern im Korps und extern für die Bevölkerung sichtbar sein. Durch Kurzvideo-Kampagnen schaffen wir Vertrauen und senken die Hemmschwelle für Hilfesuchende.</p>
-                <strong>Fokus: Enttabuisierung & direkte Kommunikation</strong>
+                <strong style="color: var(--primary-color);">Fokus: Enttabuisierung & direkte Kommunikation</strong>
             </div>
             <div class="card">
                 <h3>VSI (Verkehrssicherheit)</h3>
                 <p>Verkehrsinstruktion darf nicht am Schulhof enden. Mit zielgruppengerechtem Content (Reels, TikTok) auf den Kanälen der Kapo Uri holen wir Jugendliche genau dort ab, wo sie sich aufhalten. Themen wie E-Bike-Sicherheit und Sichtbarkeit werden digital erlebbar.</p>
-                <strong>Fokus: Digitale Präsenz & Jugendkommunikation</strong>
+                <strong style="color: var(--primary-color);">Fokus: Digitale Präsenz & Jugendkommunikation</strong>
             </div>
             <div class="card">
                 <h3>Waffenbüro & Varia</h3>
                 <p>Komplexe Themen verständlich machen. Klare, visuell ansprechende Leitfäden und Aufklärungskampagnen im digitalen Raum stärken das subjektive Sicherheitsgefühl und beugen Delikten aktiv vor.</p>
-                <strong>Fokus: Transparenz & Aufklärung</strong>
+                <strong style="color: var(--primary-color);">Fokus: Transparenz & Aufklärung</strong>
             </div>
         </div>
     </section>
 
+    <!-- Hilfestellungen (Digitaler Flyer) -->
     <section id="hilfe">
         <h2>Der "Digitale Flyer"</h2>
-        <p style="text-align: center; color: var(--text-muted); max-width: 800px; margin: 0 auto;">Ein Beispiel, wie moderne Prävention funktioniert: Niederschwellig, sofort verfügbar und sicher. Dies ist ein interaktiver Prototyp für Betroffene.</p>
+        <p style="text-align: center; color: var(--text-muted); max-width: 800px; margin: 0 auto;">Ein interaktiver Prototyp, der zeigt, wie moderne Prävention funktioniert: Niederschwellig, sofort verfügbar und sicher für Betroffene.</p>
         
         <div class="help-section">
-            <h3>Du bist nicht allein. Wir sind für dich da.</h3>
+            <h3 style="color: white; font-size: 1.8rem;">Du bist nicht allein. Wir sind für dich da.</h3>
             <div class="contact-numbers">
                 <div class="number-box">
                     Polizei Notruf
@@ -283,37 +341,78 @@
         </div>
     </section>
 
+    <!-- Lebenslauf & Profil -->
     <section id="cv">
-        <h2>Warum ich?</h2>
+        <h2>Profil & Erfahrung</h2>
+        
+        <!-- Kontakt Header -->
+        <div class="profile-header">
+            <h3>Remo Tresch</h3>
+            <p style="color: white; font-size: 1.1rem;">Erfahrene Führungspersönlichkeit (12+ Jahre Polizeidienst) & Spezialist für Krisenmanagement</p>
+            <div class="profile-details">
+                <span>📍 Attinghauserstrasse 32, 6460 Altdorf UR</span>
+                <span>📞 079 842 03 04</span>
+                <span>✉️ remotresch@gmail.com</span>
+                <span>💪 Hobbys: Krafttraining & MMA / Kickboxen</span>
+            </div>
+        </div>
+
+        <!-- Interaktive Timeline -->
         <div class="timeline">
+            <!-- Schichtchef -->
             <div class="timeline-item left">
                 <div class="timeline-content">
-                    <h3>Operative Führung & Basiswissen</h3>
-                    <p><strong>Schichtchef SVZ & ehem. Frontpolizist</strong><br>11 Jahre Erfahrung an der Front und aktuelle Führungsverantwortung im Schwerverkehrszentrum. Ich kenne die Sorgen der Bevölkerung, die Bedürfnisse der Kollegen an der Basis und weiss, wie man Entscheidungen trifft.</p>
+                    <span class="timeline-date">November 2024 – Heute</span>
+                    <h4>Schichtchef SVZ</h4>
+                    <p>Operative Führungsverantwortung für 30 Mitarbeitende und Koordination externer Partner. Lückenlose Einhaltung komplexer Vorschriften (SVG/VTS) und Qualitätskontrolle im Dienstbetrieb.</p>
                 </div>
             </div>
+            
+            <!-- Social Media -->
             <div class="timeline-item right">
                 <div class="timeline-content">
-                    <h3>Moderne Medienkompetenz</h3>
-                    <p><strong>Content Creator & Social Media Team Kapo Uri</strong><br>Fundiertes technisches Know-how in der Videoproduktion, Schnitt und Web-Development. Ich weiss, wie man Hooks setzt, Reichweite generiert und Prävention digitalisiert.</p>
+                    <span class="timeline-date">Januar 2026 – Heute (Nebenamt)</span>
+                    <h4>Social Media Verantwortlicher & Content Creator SVZ</h4>
+                    <p>Eigenständige Konzeption, Dreh und Schnitt von Reels. Transparente, moderne und bürgernahe Präsentation der polizeilichen Arbeit im digitalen Raum.</p>
                 </div>
             </div>
+
+            <!-- Frontpolizist -->
             <div class="timeline-item left">
                 <div class="timeline-content">
-                    <h3>Taktik & Didaktik</h3>
-                    <p><strong>Instruktor für persönliche Sicherheit</strong><br>Erfahrung in der Wissensvermittlung. Ich bin es gewohnt, komplexe Sicherheitsinhalte didaktisch sauber, praxisnah und verständlich an unterschiedliche Zielgruppen zu kommunizieren.</p>
+                    <span class="timeline-date">Mai 2014 – November 2024</span>
+                    <h4>Polizist Kapo Uri</h4>
+                    <p>10 Jahre Bereitschafts- und Verkehrspolizei. Operatives Krisenmanagement und Leitung der ersten Einsatzkräfte bei unvorhergesehenen Vorfällen mit hohem Sicherheitspotenzial.</p>
+                </div>
+            </div>
+
+            <!-- Verhandler -->
+            <div class="timeline-item right">
+                <div class="timeline-content">
+                    <span class="timeline-date">Januar 2020 – Dezember 2025 (Nebenamt)</span>
+                    <h4>Polizeilicher Verhandler (ZPK)</h4>
+                    <p>Spezialist für Deeskalation und lösungsorientierte Kommunikation in kritischen Stresssituationen. Verhandlungsführung unter hohem Druck.</p>
+                </div>
+            </div>
+
+            <!-- PSI Instruktor -->
+            <div class="timeline-item left">
+                <div class="timeline-content">
+                    <span class="timeline-date">September 2019 – Heute (Nebenamt)</span>
+                    <h4>PSI Instruktor</h4>
+                    <p>Zertifizierter Instruktor für persönliche Sicherheit. Verantwortlich für die jährliche Aus- und Weiterbildung in operativen Sicherheitsmodulen. Klare Vermittlung komplexer Prozessabläufe.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <footer style="text-align: center; padding: 2rem; color: var(--text-muted); border-top: 1px solid rgba(255,255,255,0.05);">
-        <p>&copy; 2026 Remo Tresch | Bewerbung als Dienstchef Präventionsdienste Kapo Uri</p>
+        <p>&copy; 2026 Remo Tresch | Bewerbung als Dienstchef Präventionsdienste Kantonspolizei Uri</p>
     </footer>
 
+    <!-- JavaScript für Quick Exit Funktion -->
     <script>
         function quickExit() {
-            // Ersetzt die aktuelle Seite im Verlauf (Zurück-Button führt nicht hierher zurück)
             window.location.replace("https://www.google.ch/search?q=wetter+uri");
         }
     </script>
