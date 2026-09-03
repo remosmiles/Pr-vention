@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bewerbung Dienstchef Präventionsdienste | Remo Tresch</title>
+    <title>Remo Tresch | Vision & Bewerbung Dienstchef Präventionsdienste</title>
     <style>
-        /* CSS Variablen für Kapo Uri Design (Dunkelblau & Gelb) */
+        /* Premium CSS Variablen - Elegant, Seriös, Modern */
         :root {
-            --bg-color: #0f172a; /* Tiefes Dunkelblau */
-            --surface-color: #1e293b;
-            --primary-color: #facc15; /* Uri Gelb */
-            --primary-dark: #ca8a04;
-            --uri-blue: #1e3a8a; /* Kapo Uri Blau */
-            --text-main: #f8fafc;
-            --text-muted: #cbd5e1;
-            --alert-color: #ef4444; /* Rot für Quick Exit */
-            --font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            --bg-base: #020617; 
+            --bg-surface: rgba(30, 41, 59, 0.6); 
+            --uri-yellow: #eab308; 
+            --uri-yellow-glow: rgba(234, 179, 8, 0.2);
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --border-light: rgba(255, 255, 255, 0.08);
+            --alert-red: #e11d48;
+            --font-main: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
         }
 
         * {
@@ -25,26 +25,35 @@
         }
 
         body {
-            font-family: var(--font-family);
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            line-height: 1.6;
+            font-family: var(--font-main);
+            background-color: var(--bg-base);
+            color: var(--text-primary);
+            line-height: 1.7;
             scroll-behavior: smooth;
+            background-image: 
+                radial-gradient(circle at 15% 50%, rgba(30, 58, 138, 0.15), transparent 25%),
+                radial-gradient(circle at 85% 30%, rgba(234, 179, 8, 0.05), transparent 25%);
+            background-attachment: fixed;
         }
 
         h1, h2, h3, h4 {
             font-weight: 600;
             line-height: 1.2;
+            letter-spacing: -0.02em;
         }
 
         h2 {
             font-size: 2.5rem;
-            margin-bottom: 2rem;
+            margin-bottom: 3rem;
             text-align: center;
-            color: var(--primary-color);
+            color: var(--text-primary);
         }
 
-        /* Header & Hero Section */
+        h2 span {
+            color: var(--uri-yellow);
+        }
+
+        /* --- Header / Hero Section --- */
         header {
             min-height: 100vh;
             display: flex;
@@ -53,164 +62,336 @@
             align-items: center;
             text-align: center;
             padding: 2rem;
-            background: linear-gradient(135deg, #0f172a 0%, var(--uri-blue) 100%);
-            border-bottom: 3px solid var(--primary-color);
+            position: relative;
+            border-bottom: 1px solid var(--border-light);
         }
 
         .logo-container img {
-            width: 150px;
+            width: 140px;
             height: auto;
-            margin-bottom: 2rem;
-            filter: drop-shadow(0 4px 6px rgba(0,0,0,0.5));
+            margin-bottom: 2.5rem;
+            filter: drop-shadow(0 10px 15px rgba(0,0,0,0.5));
+            transition: transform 0.5s ease;
+        }
+
+        .logo-container img:hover {
+            transform: scale(1.05);
         }
 
         .hero-title {
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
-            color: #ffffff;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            margin-bottom: 1.5rem;
+            font-weight: 700;
         }
 
         .hero-title span {
-            color: var(--primary-color);
+            color: var(--uri-yellow);
         }
 
         .hero-subtitle {
-            font-size: 1.5rem;
-            color: var(--text-muted);
-            margin-bottom: 3rem;
-            max-width: 800px;
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            margin-bottom: 3.5rem;
+            max-width: 700px;
+            font-weight: 300;
         }
 
         .btn {
-            display: inline-block;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
             padding: 1rem 2.5rem;
-            font-size: 1.1rem;
-            color: var(--bg-color);
-            background-color: var(--primary-color);
+            font-size: 1rem;
+            color: var(--bg-base);
+            background-color: var(--uri-yellow);
             border: none;
-            border-radius: 50px;
+            border-radius: 8px;
             text-decoration: none;
             cursor: pointer;
-            transition: transform 0.2s, background-color 0.2s;
-            font-weight: bold;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
         }
 
         .btn:hover {
-            background-color: var(--primary-dark);
-            transform: translateY(-3px);
+            background-color: #facc15;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px var(--uri-yellow-glow);
         }
 
         section {
-            padding: 6rem 2rem;
+            padding: 8rem 2rem;
             max-width: 1200px;
             margin: 0 auto;
         }
 
-        /* Konzepte - Grid */
-        .grid-container {
+        /* --- Neues KBM Layout (Echte Inhalte, neues Design) --- */
+        .kbm-redesign-section {
+            background: rgba(30, 41, 59, 0.4);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 4rem 3rem;
+            border: 1px solid var(--border-light);
+            margin-bottom: 4rem;
+        }
+        
+        .kbm-intro {
+            text-align: center;
+            color: var(--text-primary);
+            max-width: 900px;
+            margin: 0 auto 4rem auto;
+            font-size: 1.2rem;
+            font-weight: 300;
+        }
+
+        .kbm-intro strong {
+            color: var(--uri-yellow);
+            font-weight: 600;
+        }
+
+        .kbm-steps-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 2rem;
+            margin-bottom: 4rem;
         }
 
-        .card {
-            background-color: var(--surface-color);
-            padding: 2.5rem;
-            border-radius: 16px;
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            transition: transform 0.3s;
-            border-top: 4px solid var(--primary-color);
+        .step-card {
+            background: rgba(0, 0, 0, 0.3);
+            border-top: 3px solid var(--uri-yellow);
+            padding: 2.5rem 2rem;
+            border-radius: 12px;
+            text-align: center;
+            transition: transform 0.3s ease;
         }
 
-        .card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+        .step-card:hover {
+            transform: translateY(-5px);
+            background: rgba(0, 0, 0, 0.5);
         }
 
-        .card h3 {
-            color: #ffffff;
+        .step-card .step-number {
+            font-size: 3rem;
+            font-weight: 800;
+            color: rgba(234, 179, 8, 0.2);
+            margin-bottom: -1.5rem;
+            display: block;
+        }
+
+        .step-card h4 {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            color: #fff;
+            position: relative;
+            z-index: 2;
+        }
+
+        .step-card p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Themenbereiche & Beratungsstellen Tags */
+        .tags-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 1.5rem;
+        }
+
+        .tag {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 0.6rem 1.2rem;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            transition: all 0.3s ease;
+        }
+
+        .tag:hover {
+            background: rgba(234, 179, 8, 0.1);
+            border-color: var(--uri-yellow);
+            color: #fff;
+        }
+
+        .info-split {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-top: 4rem;
+            border-top: 1px solid var(--border-light);
+            padding-top: 4rem;
+        }
+
+        .info-block h4 {
             font-size: 1.5rem;
+            color: #fff;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .info-block p {
+            color: var(--text-secondary);
             margin-bottom: 1rem;
         }
 
-        .card p {
-            color: var(--text-muted);
-            margin-bottom: 1.5rem;
+        /* --- Glassmorphism Cards (Visionen) --- */
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
         }
 
-        /* Hilfestellungen (Digitaler Flyer) */
-        .help-section {
-            background-color: var(--surface-color);
+        .card {
+            background: var(--bg-surface);
+            backdrop-filter: blur(12px);
+            padding: 3rem 2.5rem;
             border-radius: 16px;
-            padding: 4rem 2rem;
+            border: 1px solid var(--border-light);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: var(--uri-yellow);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+
+        .card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(234, 179, 8, 0.3);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1.2rem;
+            color: #ffffff;
+        }
+
+        .card p {
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            font-size: 1.05rem;
+        }
+
+        .card-focus {
+            display: inline-block;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--uri-yellow);
+            font-weight: 600;
+        }
+
+        /* --- Digitaler Flyer --- */
+        .help-section {
+            background: linear-gradient(145deg, rgba(30,41,59,0.8) 0%, rgba(15,23,42,0.9) 100%);
+            border-radius: 20px;
+            padding: 5rem 2rem;
             text-align: center;
-            margin-top: 2rem;
-            border: 1px solid rgba(255,255,255,0.1);
+            border: 1px solid var(--border-light);
+            box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5);
         }
 
         .contact-numbers {
             display: flex;
             justify-content: center;
             gap: 2rem;
-            margin: 2rem 0;
+            margin: 3rem 0;
             flex-wrap: wrap;
         }
 
         .number-box {
-            background-color: rgba(255,255,255,0.05);
-            padding: 1.5rem 3rem;
+            background: rgba(255,255,255,0.03);
+            padding: 2rem 3.5rem;
             border-radius: 12px;
-            font-size: 1.2rem;
+            border: 1px solid var(--border-light);
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            transition: transform 0.3s ease;
+        }
+
+        .number-box:hover {
+            transform: translateY(-5px);
+            background: rgba(255,255,255,0.05);
         }
 
         .number-box strong {
             display: block;
-            font-size: 2rem;
-            color: var(--primary-color);
+            font-size: 2.5rem;
+            color: var(--uri-yellow);
+            margin-top: 0.5rem;
+            font-weight: 700;
         }
 
         .btn-exit {
-            background-color: var(--alert-color);
-            color: white;
+            background-color: transparent;
+            color: var(--alert-red);
+            border: 2px solid var(--alert-red);
             margin-top: 2rem;
         }
 
         .btn-exit:hover {
-            background-color: #dc2626;
+            background-color: var(--alert-red);
+            color: #ffffff;
+            box-shadow: 0 10px 20px rgba(225, 29, 72, 0.2);
         }
 
-        /* Kontakt & Profil Box */
+        /* --- Profil & Timeline --- */
         .profile-header {
-            background-color: var(--uri-blue);
-            padding: 2rem;
+            background: var(--bg-surface);
+            backdrop-filter: blur(10px);
+            padding: 3rem 2rem;
             border-radius: 16px;
-            margin-bottom: 4rem;
+            margin-bottom: 5rem;
             text-align: center;
-            border: 1px solid rgba(255,255,255,0.1);
+            border: 1px solid var(--border-light);
         }
 
         .profile-header h3 {
-            font-size: 2rem;
-            color: var(--primary-color);
-            margin-bottom: 0.5rem;
+            font-size: 2.2rem;
+            color: #ffffff;
+            margin-bottom: 0.8rem;
         }
 
         .profile-details {
             display: flex;
             justify-content: center;
-            gap: 2rem;
+            gap: 1.5rem;
             flex-wrap: wrap;
-            color: var(--text-muted);
-            margin-top: 1rem;
+            margin-top: 2rem;
         }
 
         .profile-details span {
-            background: rgba(0,0,0,0.2);
-            padding: 0.5rem 1rem;
+            background: rgba(0,0,0,0.3);
+            padding: 0.6rem 1.2rem;
             border-radius: 8px;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            border: 1px solid rgba(255,255,255,0.05);
         }
 
-        /* Lebenslauf Timeline */
         .timeline {
             position: relative;
             max-width: 900px;
@@ -221,7 +402,7 @@
             content: '';
             position: absolute;
             width: 2px;
-            background-color: var(--primary-color);
+            background: linear-gradient(to bottom, var(--uri-yellow), rgba(234,179,8,0.1));
             top: 0;
             bottom: 0;
             left: 50%;
@@ -229,103 +410,183 @@
         }
 
         .timeline-item {
-            padding: 10px 40px;
+            padding: 0 40px 40px 40px;
             position: relative;
-            background-color: inherit;
             width: 50%;
-            margin-bottom: 2rem;
         }
 
         .timeline-item::after {
             content: '';
             position: absolute;
-            width: 20px;
-            height: 20px;
-            right: -10px;
-            background-color: var(--bg-color);
-            border: 4px solid var(--primary-color);
-            top: 15px;
+            width: 16px;
+            height: 16px;
+            right: -8px;
+            background-color: var(--bg-base);
+            border: 3px solid var(--uri-yellow);
+            top: 0;
             border-radius: 50%;
             z-index: 1;
+            box-shadow: 0 0 10px var(--uri-yellow-glow);
         }
 
         .left { left: 0; }
         .right { left: 50%; }
-
-        .right::after { left: -10px; }
+        .right::after { left: -8px; }
 
         .timeline-content {
-            padding: 1.5rem;
-            background-color: var(--surface-color);
+            background: var(--bg-surface);
+            padding: 2rem;
             border-radius: 12px;
-            border-left: 4px solid var(--primary-color);
+            border: 1px solid var(--border-light);
+            transition: transform 0.3s ease;
+        }
+
+        .timeline-content:hover {
+            transform: scale(1.02);
+            border-color: rgba(255,255,255,0.15);
         }
 
         .timeline-date {
-            color: var(--primary-color);
-            font-weight: bold;
-            font-size: 0.9rem;
-            margin-bottom: 0.5rem;
+            color: var(--uri-yellow);
+            font-weight: 600;
+            font-size: 0.85rem;
+            margin-bottom: 0.8rem;
             display: block;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
         }
 
         .timeline-content h4 {
             color: #ffffff;
-            font-size: 1.3rem;
-            margin-bottom: 0.5rem;
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
         }
 
-        /* Responsive Design */
+        .timeline-content p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 3rem;
+            color: var(--text-secondary);
+            border-top: 1px solid var(--border-light);
+            font-size: 0.9rem;
+            margin-top: 4rem;
+        }
+
+        /* --- Responsive Design --- */
         @media screen and (max-width: 768px) {
-            .hero-title { font-size: 2.5rem; }
-            .timeline::after { left: 31px; }
-            .timeline-item { width: 100%; padding-left: 70px; padding-right: 25px; }
-            .timeline-item::after { left: 21px; }
+            .timeline::after { left: 24px; }
+            .timeline-item { width: 100%; padding-left: 60px; padding-right: 0; }
+            .timeline-item::after { left: 16px; }
             .right { left: 0; }
+            .contact-numbers { flex-direction: column; }
+            .info-split { grid-template-columns: 1fr; gap: 2rem; }
         }
     </style>
 </head>
 <body>
 
-    <!-- Hero Section mit Uri Logo -->
     <header id="hero">
         <div class="logo-container">
             <img src="image_e824a1.png" alt="Kapo Uri Logo">
         </div>
         <h1 class="hero-title">Sicherheit durch <span>Sichtbarkeit.</span></h1>
-        <p class="hero-subtitle">Die digitale Zukunft der Präventionsdienste Uri. Ein modernes Konzept für das KBM, die VSI und das Waffenbüro.</p>
-        <a href="#konzepte" class="btn">Zur Vision & Bewerbung</a>
+        <p class="hero-subtitle">Die digitale Zukunft der Präventionsdienste Uri. Ein modernes, strategisches Konzept für das KBM, die VSI und das Waffenbüro.</p>
+        <a href="#kbm-aktuell" class="btn">Zur Vision & Bewerbung</a>
     </header>
 
-    <!-- Konzepte Section -->
-    <section id="konzepte">
-        <h2>Präventionskonzepte</h2>
-        <div class="grid-container">
-            <div class="card">
-                <h3>KBM & Häusliche Gewalt</h3>
-                <p>Weg von anonymen Flyern, hin zu nahbaren Gesichtern. Das Kantonale Bedrohungsmanagement muss intern im Korps und extern für die Bevölkerung sichtbar sein. Durch Kurzvideo-Kampagnen schaffen wir Vertrauen und senken die Hemmschwelle für Hilfesuchende.</p>
-                <strong style="color: var(--primary-color);">Fokus: Enttabuisierung & direkte Kommunikation</strong>
+    <!-- KBM BESTEHENDE INHALTE (Neu strukturiert) -->
+    <section id="kbm-aktuell">
+        <h2>Das KBM Uri – <span>Neu gedacht</span></h2>
+        
+        <div class="kbm-redesign-section">
+            <p class="kbm-intro">
+                "Hinter dem Bedrohungsmanagement steht die Erkenntnis, dass schweren Gewalttaten nahezu immer <strong>erkennbare Warnsignale</strong> vorausgehen."<br>
+                <span style="font-size: 0.9rem; display: block; margin-top: 1rem; color: var(--text-secondary);">Anstatt wichtige Informationen in Textwüsten und Akkordeons zu verstecken, müssen wir die Kernprozesse für das Korps und die Bevölkerung sofort greifbar machen:</span>
+            </p>
+            
+            <!-- Die 3 Schritte des KBM -->
+            <div class="kbm-steps-grid">
+                <div class="step-card">
+                    <span class="step-number">1</span>
+                    <h4>Erkennen</h4>
+                    <p>Spezifische Verhaltensmuster und potenziell risikobehaftetes Verhalten frühzeitig identifizieren.</p>
+                </div>
+                <div class="step-card">
+                    <span class="step-number">2</span>
+                    <h4>Einschätzen</h4>
+                    <p>Mit speziellen Analyse-Instrumenten bewerten, wieweit ein Risiko vorhanden ist.</p>
+                </div>
+                <div class="step-card">
+                    <span class="step-number">3</span>
+                    <h4>Entschärfen</h4>
+                    <p>Interdisziplinäre Zusammenarbeit von Fachleuten, um das dynamische Risiko fallbegleitend zu minimieren.</p>
+                </div>
             </div>
-            <div class="card">
-                <h3>VSI (Verkehrssicherheit)</h3>
-                <p>Verkehrsinstruktion darf nicht am Schulhof enden. Mit zielgruppengerechtem Content (Reels, TikTok) auf den Kanälen der Kapo Uri holen wir Jugendliche genau dort ab, wo sie sich aufhalten. Themen wie E-Bike-Sicherheit und Sichtbarkeit werden digital erlebbar.</p>
-                <strong style="color: var(--primary-color);">Fokus: Digitale Präsenz & Jugendkommunikation</strong>
-            </div>
-            <div class="card">
-                <h3>Waffenbüro & Varia</h3>
-                <p>Komplexe Themen verständlich machen. Klare, visuell ansprechende Leitfäden und Aufklärungskampagnen im digitalen Raum stärken das subjektive Sicherheitsgefühl und beugen Delikten aktiv vor.</p>
-                <strong style="color: var(--primary-color);">Fokus: Transparenz & Aufklärung</strong>
+
+            <div class="info-split">
+                <!-- Themenbereiche & Beratungsstellen (Tags statt Akkordeons) -->
+                <div class="info-block">
+                    <h4>Themen & Beratungsstellen</h4>
+                    <p>Ein Klick muss genügen, um die richtige Hilfe zu finden.</p>
+                    <div class="tags-container">
+                        <span class="tag">Drohung</span>
+                        <span class="tag">Häusliche Gewalt</span>
+                        <span class="tag">Stalking</span>
+                        <span class="tag">Suizid</span>
+                        <span class="tag">Amok</span>
+                        <span class="tag">Sexuelle Gewalt</span>
+                        <span class="tag">Suchtproblematik</span>
+                        <span class="tag">Opfer & Angehörige</span>
+                    </div>
+                </div>
+
+                <!-- Meldung machen (Übersetzung der PDF-Formulare in klare Web-Vorgaben) -->
+                <div class="info-block">
+                    <h4>Eine Person melden</h4>
+                    <p>Damit wir schnell und gezielt handeln können, benötigen wir präzise Informationen aus erster Hand. Folgende Details sind für eine sofortige operative Einschätzung essenziell:</p>
+                    <ul style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.8; padding-left: 1.5rem;">
+                        <li><strong>Zeitlinie:</strong> Der genaue chronologische Ablauf der Ereignisse.</li>
+                        <li><strong>Wortlaut & Verhalten:</strong> Präzise Zitate und der emotionale Zustand der Person (aufgebracht, kontrolliert, wechselhaft).</li>
+                        <li><strong>Eskalationsmerkmale:</strong> Jegliche Hinweise auf Waffen, Suizidgedanken oder reale/fiktive Gewalttaten.</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Hilfestellungen (Digitaler Flyer) -->
+    <!-- EIGENE VISIONEN -->
+    <section id="konzepte">
+        <h2>Meine Vision für die <span>Präventionsdienste</span></h2>
+        <div class="grid-container">
+            <div class="card">
+                <h3>KBM & Häusliche Gewalt</h3>
+                <p>Weg von anonymen Flyern, hin zu nahbaren Gesichtern. Das Kantonale Bedrohungsmanagement muss intern im Korps und extern für die Bevölkerung sichtbar sein. Durch moderne Kampagnen schaffen wir Vertrauen und senken die Hemmschwelle für Hilfesuchende.</p>
+                <span class="card-focus">Fokus: Enttabuisierung & direkte Kommunikation</span>
+            </div>
+            <div class="card">
+                <h3>VSI (Verkehrssicherheit)</h3>
+                <p>Verkehrsinstruktion darf nicht am Schulhof enden. Mit zielgruppengerechtem Content auf den Kanälen der Kapo Uri holen wir Jugendliche genau dort ab, wo sie sich aufhalten. Themen wie E-Bike-Sicherheit werden digital erlebbar.</p>
+                <span class="card-focus">Fokus: Digitale Präsenz & Jugendkommunikation</span>
+            </div>
+            <div class="card">
+                <h3>Waffenbüro & Varia</h3>
+                <p>Komplexe juristische und technische Themen verständlich machen. Klare, visuell ansprechende Leitfäden im digitalen Raum stärken das subjektive Sicherheitsgefühl und beugen Delikten proaktiv vor.</p>
+                <span class="card-focus">Fokus: Transparenz & Aufklärung</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- DIGITALER FLYER -->
     <section id="hilfe">
-        <h2>Der "Digitale Flyer"</h2>
-        <p style="text-align: center; color: var(--text-muted); max-width: 800px; margin: 0 auto;">Ein interaktiver Prototyp, der zeigt, wie moderne Prävention funktioniert: Niederschwellig, sofort verfügbar und sicher für Betroffene.</p>
+        <h2>Der <span>Digitale Flyer</span></h2>
+        <p style="text-align: center; color: var(--text-secondary); max-width: 700px; margin: 0 auto 3rem auto;">Ein interaktiver Prototyp, der zeigt, wie moderne Prävention funktioniert: Niederschwellig, sofort verfügbar und kompromisslos sicher für Betroffene.</p>
         
         <div class="help-section">
-            <h3 style="color: white; font-size: 1.8rem;">Du bist nicht allein. Wir sind für dich da.</h3>
+            <h3 style="color: white; font-size: 2rem; margin-bottom: 1rem;">Du bist nicht allein. Wir sind für dich da.</h3>
             <div class="contact-numbers">
                 <div class="number-box">
                     Polizei Notruf
@@ -336,35 +597,33 @@
                     <strong>041 875 20 62</strong>
                 </div>
             </div>
-            <p>Wenn du dich bedroht fühlst, zögere nicht. Klicke auf den Button unten, um diese Seite sofort zu verlassen, falls jemand den Raum betritt.</p>
+            <p style="color: var(--text-secondary); max-width: 600px; margin: 0 auto;">Wenn du dich bedroht fühlst, zögere nicht. Klicke auf den Button unten, um diese Seite sofort und spurlos zu verlassen, falls jemand den Raum betritt.</p>
             <button onclick="quickExit()" class="btn btn-exit">Sicherer Ausstieg (Quick Exit)</button>
         </div>
     </section>
 
-    <!-- Lebenslauf & Profil -->
+    <!-- LEBENSLAUF -->
     <section id="cv">
-        <h2>Profil & Erfahrung</h2>
+        <h2>Profil & <span>Erfahrung</span></h2>
         
-        <!-- Kontakt Header -->
         <div class="profile-header">
             <h3>Remo Tresch</h3>
-            <p style="color: white; font-size: 1.1rem;">Erfahrene Führungspersönlichkeit (12+ Jahre Polizeidienst) & Spezialist für Krisenmanagement</p>
+            <p style="color: var(--text-secondary); font-size: 1.15rem; max-width: 800px; margin: 0 auto;">Erfahrene Führungspersönlichkeit (12+ Jahre Polizeidienst) mit Fokus auf operative Einsätze, Krisenmanagement und moderne digitale Kommunikation.</p>
             <div class="profile-details">
-                <span>📍 Attinghauserstrasse 32, 6460 Altdorf UR</span>
+                <span>📍 6460 Altdorf UR</span>
                 <span>📞 079 842 03 04</span>
                 <span>✉️ remotresch@gmail.com</span>
-                <span>💪 Hobbys: Krafttraining & MMA / Kickboxen</span>
+                <span>💪 Ausgleich: Kampfsport (MMA) & Krafttraining</span>
             </div>
         </div>
 
-        <!-- Interaktive Timeline -->
         <div class="timeline">
             <!-- Schichtchef -->
             <div class="timeline-item left">
                 <div class="timeline-content">
                     <span class="timeline-date">November 2024 – Heute</span>
                     <h4>Schichtchef SVZ</h4>
-                    <p>Operative Führungsverantwortung für 30 Mitarbeitende und Koordination externer Partner. Lückenlose Einhaltung komplexer Vorschriften (SVG/VTS) und Qualitätskontrolle im Dienstbetrieb.</p>
+                    <p>Operative Führungsverantwortung der Schicht und Koordination externer Partner. Fokus auf lückenlose Einhaltung komplexer Vorschriften (SVG/VTS), Qualitätskontrolle und Rechtssicherheit im Dienstbetrieb.</p>
                 </div>
             </div>
             
@@ -372,8 +631,8 @@
             <div class="timeline-item right">
                 <div class="timeline-content">
                     <span class="timeline-date">Januar 2026 – Heute (Nebenamt)</span>
-                    <h4>Social Media Verantwortlicher & Content Creator SVZ</h4>
-                    <p>Eigenständige Konzeption, Dreh und Schnitt von Reels. Transparente, moderne und bürgernahe Präsentation der polizeilichen Arbeit im digitalen Raum.</p>
+                    <h4>Social Media & Content Creator SVZ</h4>
+                    <p>Verantwortlich für den digitalen Auftritt. Eigenständige Konzeption, Dreh und Schnitt von Video-Content, um die polizeiliche Arbeit transparent und modern zu präsentieren.</p>
                 </div>
             </div>
 
@@ -382,7 +641,7 @@
                 <div class="timeline-content">
                     <span class="timeline-date">Mai 2014 – November 2024</span>
                     <h4>Polizist Kapo Uri</h4>
-                    <p>10 Jahre Bereitschafts- und Verkehrspolizei. Operatives Krisenmanagement und Leitung der ersten Einsatzkräfte bei unvorhergesehenen Vorfällen mit hohem Sicherheitspotenzial.</p>
+                    <p>10 Jahre Bereitschafts- und Verkehrspolizei. Erstausrückende Patrouille, operatives Krisenmanagement und Leitung der ersten Einsatzkräfte bei Vorfällen mit hohem Sicherheitspotenzial.</p>
                 </div>
             </div>
 
@@ -391,7 +650,7 @@
                 <div class="timeline-content">
                     <span class="timeline-date">Januar 2020 – Dezember 2025 (Nebenamt)</span>
                     <h4>Polizeilicher Verhandler (ZPK)</h4>
-                    <p>Spezialist für Deeskalation und lösungsorientierte Kommunikation in kritischen Stresssituationen. Verhandlungsführung unter hohem Druck.</p>
+                    <p>Spezialist für Deeskalation und lösungsorientierte Kommunikation. Verhandlungsführung unter Druck und direktes Stakeholder-Management in kritischen Stresssituationen.</p>
                 </div>
             </div>
 
@@ -400,17 +659,16 @@
                 <div class="timeline-content">
                     <span class="timeline-date">September 2019 – Heute (Nebenamt)</span>
                     <h4>PSI Instruktor</h4>
-                    <p>Zertifizierter Instruktor für persönliche Sicherheit. Verantwortlich für die jährliche Aus- und Weiterbildung in operativen Sicherheitsmodulen. Klare Vermittlung komplexer Prozessabläufe.</p>
+                    <p>Zertifizierter Instruktor. Verantwortlich für die jährliche Aus- und Weiterbildung in operativen Sicherheitsmodulen. Befähigung zur klaren Vermittlung komplexer Prozessabläufe.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer style="text-align: center; padding: 2rem; color: var(--text-muted); border-top: 1px solid rgba(255,255,255,0.05);">
+    <footer>
         <p>&copy; 2026 Remo Tresch | Bewerbung als Dienstchef Präventionsdienste Kantonspolizei Uri</p>
     </footer>
 
-    <!-- JavaScript für Quick Exit Funktion -->
     <script>
         function quickExit() {
             window.location.replace("https://www.google.ch/search?q=wetter+uri");
