@@ -173,19 +173,37 @@
             border-radius: 16px; width: 100%; max-width: 650px; padding: 3rem;
             position: relative; transform: translateY(30px); transition: all 0.4s ease;
             box-shadow: 0 25px 50px rgba(0,0,0,0.5); border-top: 4px solid var(--uri-yellow);
+            max-height: 90vh; overflow-y: auto;
         }
         .modal-overlay.active .modal-content { transform: translateY(0); }
         .close-modal {
             position: absolute; top: 1.5rem; right: 1.5rem; background: none; border: none;
             color: var(--text-secondary); font-size: 1.5rem; cursor: pointer; transition: color 0.2s;
+            z-index: 10;
         }
         .close-modal:hover { color: var(--uri-yellow); }
-        .modal-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem; }
+        .modal-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; }
         .modal-icon { font-size: 2rem; background: rgba(234, 179, 8, 0.1); padding: 1rem; border-radius: 12px; }
         .modal-body h4 { color: #fff; font-size: 1.3rem; margin-bottom: 1rem; }
         .modal-body p { color: var(--text-secondary); margin-bottom: 1.5rem; line-height: 1.6; }
         .modal-body ul { color: var(--text-secondary); padding-left: 1.5rem; margin-bottom: 1.5rem; }
         .modal-body li { margin-bottom: 0.5rem; }
+
+        /* Video Wrapper für responsives YouTube Design 16:9 */
+        .video-wrapper {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+            border-radius: 12px;
+            margin-bottom: 1.5rem;
+            border: 1px solid rgba(255,255,255,0.1);
+            background: #000;
+        }
+        .video-wrapper iframe {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+        }
 
         /* --- Digitaler Flyer & CV --- */
         .help-section { background: linear-gradient(145deg, rgba(30,41,59,0.8) 0%, rgba(15,23,42,0.9) 100%); border-radius: 20px; padding: 5rem 2rem; text-align: center; border: 1px solid var(--border-light); box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5); }
@@ -286,7 +304,6 @@
         </div>
     </section>
 
-    <!-- EIGENE VISIONEN MIT BUTTONS FÜR MODALS -->
     <section id="konzepte">
         <h2>Meine Vision für die <span>Präventionsdienste</span></h2>
         <div class="grid-container">
@@ -399,12 +416,17 @@
                 <h3 style="color: #fff;">Video-Konzepte: KBM</h3>
             </div>
             <div class="modal-body">
-                <h4>Kampagne: "Signal for Help"</h4>
-                <p>Aufklärung über das weltweit bekannte Handzeichen bei häuslicher Gewalt. Betroffene können so unauffällig um Hilfe bitten, wenn der Täter im Raum ist.</p>
+                <!-- Eingebettetes Video (Autoplay & Muted) -->
+                <div class="video-wrapper">
+                    <!-- HINWEIS FÜR DICH: Ersetze VIDEO_ID_KBM mit der echten ID (z.B. dQw4w9WgXcQ) -->
+                    <iframe src="https://www.youtube.com/watch?v=VOfzn2tpyNo&t=12smute=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                </div>
+                
+                <h4>Referenz: Bedrohungsmanagement Basel-Stadt</h4>
+                <p>Dieses Video der Kantonspolizei Basel-Stadt ist ein exzellentes Beispiel dafür, wie komplexe Strukturen des KBM visuell leicht verdaulich und bürgernah für die Bevölkerung aufbereitet werden können.</p>
                 <ul>
-                    <li><strong>Format:</strong> Emotionales, wortloses Reel/Short.</li>
-                    <li><strong>Message:</strong> "Wir kennen das Zeichen. Wir helfen dir."</li>
-                    <li><strong>Ziel:</strong> Enorme Reichweite durch leichte Teilbarkeit und Sensibilisierung des Umfelds (Nachbarn, Freunde).</li>
+                    <li><strong>Format:</strong> Emotionales, erklärendes Format.</li>
+                    <li><strong>Ziel:</strong> Enorme Reichweite durch leichte Teilbarkeit und Sensibilisierung des Umfelds (Nachbarn, Freunde, Behörden).</li>
                 </ul>
             </div>
         </div>
@@ -419,12 +441,18 @@
                 <h3 style="color: #fff;">Video-Konzepte: VSI</h3>
             </div>
             <div class="modal-body">
-                <h4>Gezielte Verkehrsprävention für Jugendliche</h4>
-                <p>Nach direktem Kontakt mit dem Chef VSI wurde mir bestätigt: Das Potenzial für Präventionsvideos in diesem Bereich ist enorm. Die Zielgruppe ist ohnehin digital unterwegs.</p>
+                 <!-- Eingebettetes Video (Autoplay & Muted) -->
+                 <div class="video-wrapper">
+                    <!-- HINWEIS FÜR DICH: Ersetze VIDEO_ID_VSI mit der echten ID -->
+                    <iframe src="https://www.youtube.com/watch?v=3u1fYgjAo-w&t=23s&mute=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                </div>
+                
+                <h4>Referenz: Stadtpolizei Kloten</h4>
+                <p>Verkehrsinstruktion modern gedacht: Nach meinem Kontakt mit dem Chef VSI wurde mir bestätigt, dass Präventionsvideos extremes Potenzial haben. Dieses Beispiel aus Kloten zeigt die Tonalität, mit der wir Schüler im digitalen Alltag abholen.</p>
                 <ul>
-                    <li><strong>Fahrradwege richtig nutzen:</strong> Ein POV-Video (Point of View) aus Sicht eines E-Bike-Fahrers, das gefährliche Kreuzungen im Kanton Uri erklärt.</li>
-                    <li><strong>Schulstart-Check:</strong> Ein dynamisches "Checklisten"-Reel: Welche Ausrüstung ist für das Kinderfahrrad zwingend obligatorisch?</li>
-                    <li><strong>Ziel:</strong> Schulungsstoff aus dem Klassenzimmer in den digitalen Alltag der Schüler und Eltern verlängern.</li>
+                    <li><strong>Fahrradwege richtig nutzen:</strong> Gefährliche Kreuzungen sicher befahren.</li>
+                    <li><strong>Schulstart-Check:</strong> Obligatorische Ausrüstung für Fahrräder.</li>
+                    <li><strong>Ziel:</strong> Schulungsstoff aus dem Klassenzimmer auf das Smartphone verlängern.</li>
                 </ul>
             </div>
         </div>
@@ -439,18 +467,23 @@
                 <h3 style="color: #fff;">Video-Konzepte: Waffenbüro</h3>
             </div>
             <div class="modal-body">
-                <h4>Wissen spannend verpacken</h4>
-                <p>Das Waffenrecht ist oft trocken und komplex. Mit modernen Formaten schaffen wir Aufklärung, ohne bürokratisch zu wirken.</p>
+                <!-- Eingebettetes Video (Autoplay & Muted) -->
+                <div class="video-wrapper">
+                    <!-- HINWEIS FÜR DICH: Ersetze VIDEO_ID_WAFFEN mit der echten ID -->
+                    <iframe src="https://www.youtube.com/watch?v=6IWjrTESGm4mute=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                </div>
+                
+                <h4>Referenz: Waffen und Gesetz – 10 Fakten</h4>
+                <p>Das Waffenrecht ist oft trocken und komplex. Dieses Best-Practice-Beispiel zeigt, wie wir Aufklärung schaffen, ohne unnötig bürokratisch zu wirken.</p>
                 <ul>
-                    <li><strong>"Wusstest du schon?"-Serie:</strong> Kurze, knackige Videos zu Neuerungen im Waffen- oder Sprengstoffgesetz.</li>
-                    <li><strong>Sichere Aufbewahrung:</strong> Ein 30-sekündiges Video, das pragmatisch aufzeigt, wie Waffen zu Hause rechtlich korrekt gesichert werden müssen.</li>
-                    <li><strong>Ziel:</strong> Dem Thema die Schwere nehmen, Transparenz schaffen und Unfällen oder strafbaren Handlungen aus Unwissenheit vorbeugen.</li>
+                    <li><strong>Wissen verpacken:</strong> Kurze, knackige Videos zu Neuerungen im Gesetz (z.B. Waffenaufbewahrung zu Hause).</li>
+                    <li><strong>Ziel:</strong> Dem Thema die Schwere nehmen, Transparenz schaffen und Unfällen oder strafbaren Handlungen aus Unwissenheit aktiv vorbeugen.</li>
                 </ul>
             </div>
         </div>
     </div>
 
-    <!-- JavaScript für Quick Exit & Modals -->
+    <!-- JavaScript für Quick Exit & Modals (Inkl. Autoplay-Stop) -->
     <script>
         function quickExit() {
             window.location.replace("https://www.google.ch/search?q=wetter+uri");
@@ -465,6 +498,13 @@
             if (forceClose || event.target.classList.contains('modal-overlay')) {
                 document.querySelectorAll('.modal-overlay').forEach(modal => {
                     modal.classList.remove('active');
+                    
+                    // Stoppt das Video, wenn das Modal geschlossen wird, indem die Quelle kurz entfernt und neu geladen wird
+                    const iframe = modal.querySelector('iframe');
+                    if (iframe) {
+                        let src = iframe.src;
+                        iframe.src = src; 
+                    }
                 });
                 document.body.style.overflow = 'auto';
             }
