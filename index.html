@@ -18,11 +18,7 @@
             --font-main: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
         body {
             font-family: var(--font-main);
@@ -36,22 +32,9 @@
             background-attachment: fixed;
         }
 
-        h1, h2, h3, h4 {
-            font-weight: 600;
-            line-height: 1.2;
-            letter-spacing: -0.02em;
-        }
-
-        h2 {
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
-            text-align: center;
-            color: var(--text-primary);
-        }
-
-        h2 span {
-            color: var(--uri-yellow);
-        }
+        h1, h2, h3, h4 { font-weight: 600; line-height: 1.2; letter-spacing: -0.02em; }
+        h2 { font-size: 2.5rem; margin-bottom: 3rem; text-align: center; color: var(--text-primary); }
+        h2 span { color: var(--uri-yellow); }
 
         /* --- Header / Hero Section --- */
         header {
@@ -73,21 +56,14 @@
             filter: drop-shadow(0 10px 15px rgba(0,0,0,0.5));
             transition: transform 0.5s ease;
         }
-
-        .logo-container img:hover {
-            transform: scale(1.05);
-        }
+        .logo-container img:hover { transform: scale(1.05); }
 
         .hero-title {
             font-size: clamp(2.5rem, 5vw, 4rem);
             margin-bottom: 1.5rem;
             font-weight: 700;
         }
-
-        .hero-title span {
-            color: var(--uri-yellow);
-        }
-
+        .hero-title span { color: var(--uri-yellow); }
         .hero-subtitle {
             font-size: 1.25rem;
             color: var(--text-secondary);
@@ -113,20 +89,15 @@
             letter-spacing: 0.05em;
             text-transform: uppercase;
         }
-
         .btn:hover {
             background-color: #facc15;
             transform: translateY(-2px);
             box-shadow: 0 10px 20px var(--uri-yellow-glow);
         }
 
-        section {
-            padding: 8rem 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
+        section { padding: 8rem 2rem; max-width: 1200px; margin: 0 auto; }
 
-        /* --- Neues KBM Layout (Echte Inhalte, neues Design) --- */
+        /* --- KBM Redesign Section --- */
         .kbm-redesign-section {
             background: rgba(30, 41, 59, 0.4);
             backdrop-filter: blur(10px);
@@ -135,354 +106,121 @@
             border: 1px solid var(--border-light);
             margin-bottom: 4rem;
         }
+        .kbm-intro { text-align: center; color: var(--text-primary); max-width: 900px; margin: 0 auto 4rem auto; font-size: 1.2rem; font-weight: 300; }
+        .kbm-intro strong { color: var(--uri-yellow); font-weight: 600; }
         
-        .kbm-intro {
-            text-align: center;
-            color: var(--text-primary);
-            max-width: 900px;
-            margin: 0 auto 4rem auto;
-            font-size: 1.2rem;
-            font-weight: 300;
-        }
+        .kbm-steps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-bottom: 4rem; }
+        .step-card { background: rgba(0, 0, 0, 0.3); border-top: 3px solid var(--uri-yellow); padding: 2.5rem 2rem; border-radius: 12px; text-align: center; transition: transform 0.3s ease; }
+        .step-card:hover { transform: translateY(-5px); background: rgba(0, 0, 0, 0.5); }
+        .step-card .step-number { font-size: 3rem; font-weight: 800; color: rgba(234, 179, 8, 0.2); margin-bottom: -1.5rem; display: block; }
+        .step-card h4 { font-size: 1.4rem; margin-bottom: 1rem; color: #fff; position: relative; z-index: 2; }
+        .step-card p { color: var(--text-secondary); font-size: 0.95rem; position: relative; z-index: 2; }
 
-        .kbm-intro strong {
-            color: var(--uri-yellow);
-            font-weight: 600;
-        }
+        .info-split { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin-top: 4rem; border-top: 1px solid var(--border-light); padding-top: 4rem; }
+        .info-block h4 { font-size: 1.5rem; color: #fff; margin-bottom: 1.5rem; }
+        .info-block p { color: var(--text-secondary); margin-bottom: 1rem; }
+        .tags-container { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1.5rem; }
+        .tag { background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); padding: 0.6rem 1.2rem; border-radius: 50px; font-size: 0.9rem; color: var(--text-secondary); }
 
-        .kbm-steps-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            margin-bottom: 4rem;
-        }
-
-        .step-card {
-            background: rgba(0, 0, 0, 0.3);
-            border-top: 3px solid var(--uri-yellow);
-            padding: 2.5rem 2rem;
-            border-radius: 12px;
-            text-align: center;
-            transition: transform 0.3s ease;
-        }
-
-        .step-card:hover {
-            transform: translateY(-5px);
-            background: rgba(0, 0, 0, 0.5);
-        }
-
-        .step-card .step-number {
-            font-size: 3rem;
-            font-weight: 800;
-            color: rgba(234, 179, 8, 0.2);
-            margin-bottom: -1.5rem;
-            display: block;
-        }
-
-        .step-card h4 {
-            font-size: 1.4rem;
-            margin-bottom: 1rem;
-            color: #fff;
-            position: relative;
-            z-index: 2;
-        }
-
-        .step-card p {
-            color: var(--text-secondary);
-            font-size: 0.95rem;
-            position: relative;
-            z-index: 2;
-        }
-
-        /* Themenbereiche & Beratungsstellen Tags */
-        .tags-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-            justify-content: center;
-            margin-top: 1.5rem;
-        }
-
-        .tag {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            padding: 0.6rem 1.2rem;
-            border-radius: 50px;
-            font-size: 0.9rem;
-            color: var(--text-secondary);
-            transition: all 0.3s ease;
-        }
-
-        .tag:hover {
-            background: rgba(234, 179, 8, 0.1);
-            border-color: var(--uri-yellow);
-            color: #fff;
-        }
-
-        .info-split {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            margin-top: 4rem;
-            border-top: 1px solid var(--border-light);
-            padding-top: 4rem;
-        }
-
-        .info-block h4 {
-            font-size: 1.5rem;
-            color: #fff;
-            margin-bottom: 1.5rem;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .info-block p {
-            color: var(--text-secondary);
-            margin-bottom: 1rem;
-        }
-
-        /* --- Glassmorphism Cards (Visionen) --- */
-        .grid-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2.5rem;
-        }
-
+        /* --- Visionen / Konzepte Cards --- */
+        .grid-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2.5rem; }
         .card {
             background: var(--bg-surface);
             backdrop-filter: blur(12px);
             padding: 3rem 2.5rem;
             border-radius: 16px;
             border: 1px solid var(--border-light);
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: all 0.4s ease;
             position: relative;
             overflow: hidden;
+            display: flex;
+            flex-direction: column;
         }
-
         .card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 3px;
-            background: var(--uri-yellow);
-            transform: scaleX(0);
-            transform-origin: left;
-            transition: transform 0.4s ease;
+            content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 3px;
+            background: var(--uri-yellow); transform: scaleX(0); transform-origin: left; transition: transform 0.4s ease;
         }
-
-        .card:hover::before {
-            transform: scaleX(1);
-        }
-
-        .card:hover {
-            transform: translateY(-8px);
-            border-color: rgba(234, 179, 8, 0.3);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
-        }
-
-        .card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1.2rem;
-            color: #ffffff;
-        }
-
-        .card p {
-            color: var(--text-secondary);
-            margin-bottom: 2rem;
-            font-size: 1.05rem;
-        }
-
-        .card-focus {
-            display: inline-block;
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
+        .card:hover::before { transform: scaleX(1); }
+        .card:hover { transform: translateY(-8px); border-color: rgba(234, 179, 8, 0.3); box-shadow: 0 20px 40px rgba(0,0,0,0.4); }
+        .card h3 { font-size: 1.5rem; margin-bottom: 1.2rem; color: #ffffff; }
+        .card p { color: var(--text-secondary); margin-bottom: 2rem; font-size: 1.05rem; flex-grow: 1; }
+        .card-focus { display: inline-block; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--uri-yellow); font-weight: 600; margin-bottom: 1.5rem; }
+        
+        .btn-outline {
+            background: transparent;
             color: var(--uri-yellow);
+            border: 1px solid var(--uri-yellow);
+            padding: 0.8rem 1.5rem;
+            border-radius: 6px;
+            cursor: pointer;
             font-weight: 600;
+            transition: all 0.3s ease;
+            width: 100%;
         }
+        .btn-outline:hover { background: rgba(234, 179, 8, 0.1); box-shadow: 0 5px 15px var(--uri-yellow-glow); }
 
-        /* --- Digitaler Flyer --- */
-        .help-section {
-            background: linear-gradient(145deg, rgba(30,41,59,0.8) 0%, rgba(15,23,42,0.9) 100%);
-            border-radius: 20px;
-            padding: 5rem 2rem;
-            text-align: center;
-            border: 1px solid var(--border-light);
-            box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5);
+        /* --- Modal (Pop-up) Styling --- */
+        .modal-overlay {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(2, 6, 23, 0.85); backdrop-filter: blur(8px);
+            display: flex; justify-content: center; align-items: center;
+            z-index: 1000; opacity: 0; visibility: hidden; transition: all 0.3s ease;
+            padding: 1rem;
         }
-
-        .contact-numbers {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin: 3rem 0;
-            flex-wrap: wrap;
+        .modal-overlay.active { opacity: 1; visibility: visible; }
+        .modal-content {
+            background: var(--bg-surface); border: 1px solid var(--border-light);
+            border-radius: 16px; width: 100%; max-width: 650px; padding: 3rem;
+            position: relative; transform: translateY(30px); transition: all 0.4s ease;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.5); border-top: 4px solid var(--uri-yellow);
         }
-
-        .number-box {
-            background: rgba(255,255,255,0.03);
-            padding: 2rem 3.5rem;
-            border-radius: 12px;
-            border: 1px solid var(--border-light);
-            font-size: 1.1rem;
-            color: var(--text-secondary);
-            transition: transform 0.3s ease;
+        .modal-overlay.active .modal-content { transform: translateY(0); }
+        .close-modal {
+            position: absolute; top: 1.5rem; right: 1.5rem; background: none; border: none;
+            color: var(--text-secondary); font-size: 1.5rem; cursor: pointer; transition: color 0.2s;
         }
+        .close-modal:hover { color: var(--uri-yellow); }
+        .modal-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem; }
+        .modal-icon { font-size: 2rem; background: rgba(234, 179, 8, 0.1); padding: 1rem; border-radius: 12px; }
+        .modal-body h4 { color: #fff; font-size: 1.3rem; margin-bottom: 1rem; }
+        .modal-body p { color: var(--text-secondary); margin-bottom: 1.5rem; line-height: 1.6; }
+        .modal-body ul { color: var(--text-secondary); padding-left: 1.5rem; margin-bottom: 1.5rem; }
+        .modal-body li { margin-bottom: 0.5rem; }
 
-        .number-box:hover {
-            transform: translateY(-5px);
-            background: rgba(255,255,255,0.05);
-        }
+        /* --- Digitaler Flyer & CV --- */
+        .help-section { background: linear-gradient(145deg, rgba(30,41,59,0.8) 0%, rgba(15,23,42,0.9) 100%); border-radius: 20px; padding: 5rem 2rem; text-align: center; border: 1px solid var(--border-light); box-shadow: 0 25px 50px -12px rgba(0,0,0,0.5); }
+        .contact-numbers { display: flex; justify-content: center; gap: 2rem; margin: 3rem 0; flex-wrap: wrap; }
+        .number-box { background: rgba(255,255,255,0.03); padding: 2rem 3.5rem; border-radius: 12px; border: 1px solid var(--border-light); font-size: 1.1rem; color: var(--text-secondary); transition: transform 0.3s ease; }
+        .number-box:hover { transform: translateY(-5px); background: rgba(255,255,255,0.05); }
+        .number-box strong { display: block; font-size: 2.5rem; color: var(--uri-yellow); margin-top: 0.5rem; font-weight: 700; }
+        .btn-exit { background-color: transparent; color: var(--alert-red); border: 2px solid var(--alert-red); margin-top: 2rem; }
+        .btn-exit:hover { background-color: var(--alert-red); color: #ffffff; box-shadow: 0 10px 20px rgba(225, 29, 72, 0.2); }
 
-        .number-box strong {
-            display: block;
-            font-size: 2.5rem;
-            color: var(--uri-yellow);
-            margin-top: 0.5rem;
-            font-weight: 700;
-        }
+        .profile-header { background: var(--bg-surface); backdrop-filter: blur(10px); padding: 3rem 2rem; border-radius: 16px; margin-bottom: 5rem; text-align: center; border: 1px solid var(--border-light); }
+        .profile-header h3 { font-size: 2.2rem; color: #ffffff; margin-bottom: 0.8rem; }
+        .profile-details { display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; margin-top: 2rem; }
+        .profile-details span { background: rgba(0,0,0,0.3); padding: 0.6rem 1.2rem; border-radius: 8px; font-size: 0.9rem; color: var(--text-secondary); border: 1px solid rgba(255,255,255,0.05); }
 
-        .btn-exit {
-            background-color: transparent;
-            color: var(--alert-red);
-            border: 2px solid var(--alert-red);
-            margin-top: 2rem;
-        }
-
-        .btn-exit:hover {
-            background-color: var(--alert-red);
-            color: #ffffff;
-            box-shadow: 0 10px 20px rgba(225, 29, 72, 0.2);
-        }
-
-        /* --- Profil & Timeline --- */
-        .profile-header {
-            background: var(--bg-surface);
-            backdrop-filter: blur(10px);
-            padding: 3rem 2rem;
-            border-radius: 16px;
-            margin-bottom: 5rem;
-            text-align: center;
-            border: 1px solid var(--border-light);
-        }
-
-        .profile-header h3 {
-            font-size: 2.2rem;
-            color: #ffffff;
-            margin-bottom: 0.8rem;
-        }
-
-        .profile-details {
-            display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-            flex-wrap: wrap;
-            margin-top: 2rem;
-        }
-
-        .profile-details span {
-            background: rgba(0,0,0,0.3);
-            padding: 0.6rem 1.2rem;
-            border-radius: 8px;
-            font-size: 0.9rem;
-            color: var(--text-secondary);
-            border: 1px solid rgba(255,255,255,0.05);
-        }
-
-        .timeline {
-            position: relative;
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .timeline::after {
-            content: '';
-            position: absolute;
-            width: 2px;
-            background: linear-gradient(to bottom, var(--uri-yellow), rgba(234,179,8,0.1));
-            top: 0;
-            bottom: 0;
-            left: 50%;
-            margin-left: -1px;
-        }
-
-        .timeline-item {
-            padding: 0 40px 40px 40px;
-            position: relative;
-            width: 50%;
-        }
-
-        .timeline-item::after {
-            content: '';
-            position: absolute;
-            width: 16px;
-            height: 16px;
-            right: -8px;
-            background-color: var(--bg-base);
-            border: 3px solid var(--uri-yellow);
-            top: 0;
-            border-radius: 50%;
-            z-index: 1;
-            box-shadow: 0 0 10px var(--uri-yellow-glow);
-        }
-
+        .timeline { position: relative; max-width: 900px; margin: 0 auto; }
+        .timeline::after { content: ''; position: absolute; width: 2px; background: linear-gradient(to bottom, var(--uri-yellow), rgba(234,179,8,0.1)); top: 0; bottom: 0; left: 50%; margin-left: -1px; }
+        .timeline-item { padding: 0 40px 40px 40px; position: relative; width: 50%; }
+        .timeline-item::after { content: ''; position: absolute; width: 16px; height: 16px; right: -8px; background-color: var(--bg-base); border: 3px solid var(--uri-yellow); top: 0; border-radius: 50%; z-index: 1; box-shadow: 0 0 10px var(--uri-yellow-glow); }
         .left { left: 0; }
         .right { left: 50%; }
         .right::after { left: -8px; }
+        .timeline-content { background: var(--bg-surface); padding: 2rem; border-radius: 12px; border: 1px solid var(--border-light); transition: transform 0.3s ease; }
+        .timeline-content:hover { transform: scale(1.02); border-color: rgba(255,255,255,0.15); }
+        .timeline-date { color: var(--uri-yellow); font-weight: 600; font-size: 0.85rem; margin-bottom: 0.8rem; display: block; text-transform: uppercase; letter-spacing: 0.05em; }
+        .timeline-content h4 { color: #ffffff; font-size: 1.25rem; margin-bottom: 1rem; }
+        .timeline-content p { color: var(--text-secondary); font-size: 0.95rem; }
 
-        .timeline-content {
-            background: var(--bg-surface);
-            padding: 2rem;
-            border-radius: 12px;
-            border: 1px solid var(--border-light);
-            transition: transform 0.3s ease;
-        }
+        footer { text-align: center; padding: 3rem; color: var(--text-secondary); border-top: 1px solid var(--border-light); font-size: 0.9rem; margin-top: 4rem; }
 
-        .timeline-content:hover {
-            transform: scale(1.02);
-            border-color: rgba(255,255,255,0.15);
-        }
-
-        .timeline-date {
-            color: var(--uri-yellow);
-            font-weight: 600;
-            font-size: 0.85rem;
-            margin-bottom: 0.8rem;
-            display: block;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
-
-        .timeline-content h4 {
-            color: #ffffff;
-            font-size: 1.25rem;
-            margin-bottom: 1rem;
-        }
-
-        .timeline-content p {
-            color: var(--text-secondary);
-            font-size: 0.95rem;
-        }
-
-        footer {
-            text-align: center;
-            padding: 3rem;
-            color: var(--text-secondary);
-            border-top: 1px solid var(--border-light);
-            font-size: 0.9rem;
-            margin-top: 4rem;
-        }
-
-        /* --- Responsive Design --- */
         @media screen and (max-width: 768px) {
             .timeline::after { left: 24px; }
             .timeline-item { width: 100%; padding-left: 60px; padding-right: 0; }
             .timeline-item::after { left: 16px; }
             .right { left: 0; }
-            .contact-numbers { flex-direction: column; }
             .info-split { grid-template-columns: 1fr; gap: 2rem; }
         }
     </style>
@@ -498,17 +236,14 @@
         <a href="#kbm-aktuell" class="btn">Zur Vision & Bewerbung</a>
     </header>
 
-    <!-- KBM BESTEHENDE INHALTE (Neu strukturiert) -->
     <section id="kbm-aktuell">
         <h2>Das KBM Uri – <span>Neu gedacht</span></h2>
-        
         <div class="kbm-redesign-section">
             <p class="kbm-intro">
                 "Hinter dem Bedrohungsmanagement steht die Erkenntnis, dass schweren Gewalttaten nahezu immer <strong>erkennbare Warnsignale</strong> vorausgehen."<br>
                 <span style="font-size: 0.9rem; display: block; margin-top: 1rem; color: var(--text-secondary);">Anstatt wichtige Informationen in Textwüsten und Akkordeons zu verstecken, müssen wir die Kernprozesse für das Korps und die Bevölkerung sofort greifbar machen:</span>
             </p>
             
-            <!-- Die 3 Schritte des KBM -->
             <div class="kbm-steps-grid">
                 <div class="step-card">
                     <span class="step-number">1</span>
@@ -528,59 +263,59 @@
             </div>
 
             <div class="info-split">
-                <!-- Themenbereiche & Beratungsstellen (Tags statt Akkordeons) -->
                 <div class="info-block">
                     <h4>Themen & Beratungsstellen</h4>
                     <p>Ein Klick muss genügen, um die richtige Hilfe zu finden.</p>
                     <div class="tags-container">
-                        <span class="tag">Drohung</span>
-                        <span class="tag">Häusliche Gewalt</span>
-                        <span class="tag">Stalking</span>
-                        <span class="tag">Suizid</span>
-                        <span class="tag">Amok</span>
-                        <span class="tag">Sexuelle Gewalt</span>
-                        <span class="tag">Suchtproblematik</span>
-                        <span class="tag">Opfer & Angehörige</span>
+                        <span class="tag">Drohung</span> <span class="tag">Häusliche Gewalt</span>
+                        <span class="tag">Stalking</span> <span class="tag">Suizid</span>
+                        <span class="tag">Amok</span> <span class="tag">Sexuelle Gewalt</span>
+                        <span class="tag">Suchtproblematik</span> <span class="tag">Opfer & Angehörige</span>
                     </div>
                 </div>
-
-                <!-- Meldung machen (Übersetzung der PDF-Formulare in klare Web-Vorgaben) -->
                 <div class="info-block">
                     <h4>Eine Person melden</h4>
-                    <p>Damit wir schnell und gezielt handeln können, benötigen wir präzise Informationen aus erster Hand. Folgende Details sind für eine sofortige operative Einschätzung essenziell:</p>
+                    <p>Damit wir schnell und gezielt handeln können, benötigen wir präzise Informationen aus erster Hand:</p>
                     <ul style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.8; padding-left: 1.5rem;">
                         <li><strong>Zeitlinie:</strong> Der genaue chronologische Ablauf der Ereignisse.</li>
-                        <li><strong>Wortlaut & Verhalten:</strong> Präzise Zitate und der emotionale Zustand der Person (aufgebracht, kontrolliert, wechselhaft).</li>
-                        <li><strong>Eskalationsmerkmale:</strong> Jegliche Hinweise auf Waffen, Suizidgedanken oder reale/fiktive Gewalttaten.</li>
+                        <li><strong>Wortlaut & Verhalten:</strong> Präzise Zitate und der emotionale Zustand.</li>
+                        <li><strong>Eskalationsmerkmale:</strong> Hinweise auf Waffen oder Suizidgedanken.</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- EIGENE VISIONEN -->
+    <!-- EIGENE VISIONEN MIT BUTTONS FÜR MODALS -->
     <section id="konzepte">
         <h2>Meine Vision für die <span>Präventionsdienste</span></h2>
         <div class="grid-container">
+            <!-- KBM Card -->
             <div class="card">
                 <h3>KBM & Häusliche Gewalt</h3>
-                <p>Weg von anonymen Flyern, hin zu nahbaren Gesichtern. Das Kantonale Bedrohungsmanagement muss intern im Korps und extern für die Bevölkerung sichtbar sein. Durch moderne Kampagnen schaffen wir Vertrauen und senken die Hemmschwelle für Hilfesuchende.</p>
                 <span class="card-focus">Fokus: Enttabuisierung & direkte Kommunikation</span>
+                <p>Weg von anonymen Flyern, hin zu nahbaren Gesichtern. Das KBM muss intern im Korps und extern für die Bevölkerung sichtbar sein. Durch moderne Social-Media-Kampagnen senken wir die Hemmschwelle für Hilfesuchende.</p>
+                <button class="btn-outline" onclick="openModal('modal-kbm')">Konkrete Video-Ideen</button>
             </div>
+            
+            <!-- VSI Card -->
             <div class="card">
                 <h3>VSI (Verkehrssicherheit)</h3>
-                <p>Verkehrsinstruktion darf nicht am Schulhof enden. Mit zielgruppengerechtem Content auf den Kanälen der Kapo Uri holen wir Jugendliche genau dort ab, wo sie sich aufhalten. Themen wie E-Bike-Sicherheit werden digital erlebbar.</p>
                 <span class="card-focus">Fokus: Digitale Präsenz & Jugendkommunikation</span>
+                <p>Verkehrsinstruktion darf nicht am Schulhof enden. Mit zielgruppengerechtem Content auf den Kanälen der Kapo Uri holen wir Jugendliche genau dort ab, wo sie sich aufhalten.</p>
+                <button class="btn-outline" onclick="openModal('modal-vsi')">Konkrete Video-Ideen</button>
             </div>
+
+            <!-- Waffenbüro Card -->
             <div class="card">
                 <h3>Waffenbüro & Varia</h3>
-                <p>Komplexe juristische und technische Themen verständlich machen. Klare, visuell ansprechende Leitfäden im digitalen Raum stärken das subjektive Sicherheitsgefühl und beugen Delikten proaktiv vor.</p>
                 <span class="card-focus">Fokus: Transparenz & Aufklärung</span>
+                <p>Komplexe juristische und technische Themen verständlich machen. Klare, visuell ansprechende Kurzvideos im digitalen Raum stärken das Sicherheitsgefühl und beugen Delikten proaktiv vor.</p>
+                <button class="btn-outline" onclick="openModal('modal-waffen')">Konkrete Video-Ideen</button>
             </div>
         </div>
     </section>
 
-    <!-- DIGITALER FLYER -->
     <section id="hilfe">
         <h2>Der <span>Digitale Flyer</span></h2>
         <p style="text-align: center; color: var(--text-secondary); max-width: 700px; margin: 0 auto 3rem auto;">Ein interaktiver Prototyp, der zeigt, wie moderne Prävention funktioniert: Niederschwellig, sofort verfügbar und kompromisslos sicher für Betroffene.</p>
@@ -588,55 +323,41 @@
         <div class="help-section">
             <h3 style="color: white; font-size: 2rem; margin-bottom: 1rem;">Du bist nicht allein. Wir sind für dich da.</h3>
             <div class="contact-numbers">
-                <div class="number-box">
-                    Polizei Notruf
-                    <strong>117</strong>
-                </div>
-                <div class="number-box">
-                    Opferhilfe Uri
-                    <strong>041 875 20 62</strong>
-                </div>
+                <div class="number-box">Polizei Notruf<strong>117</strong></div>
+                <div class="number-box">Opferhilfe Uri<strong>041 875 20 62</strong></div>
             </div>
             <p style="color: var(--text-secondary); max-width: 600px; margin: 0 auto;">Wenn du dich bedroht fühlst, zögere nicht. Klicke auf den Button unten, um diese Seite sofort und spurlos zu verlassen, falls jemand den Raum betritt.</p>
             <button onclick="quickExit()" class="btn btn-exit">Sicherer Ausstieg (Quick Exit)</button>
         </div>
     </section>
 
-    <!-- LEBENSLAUF -->
     <section id="cv">
         <h2>Profil & <span>Erfahrung</span></h2>
-        
         <div class="profile-header">
             <h3>Remo Tresch</h3>
             <p style="color: var(--text-secondary); font-size: 1.15rem; max-width: 800px; margin: 0 auto;">Erfahrene Führungspersönlichkeit (12+ Jahre Polizeidienst) mit Fokus auf operative Einsätze, Krisenmanagement und moderne digitale Kommunikation.</p>
             <div class="profile-details">
                 <span>📍 6460 Altdorf UR</span>
                 <span>📞 079 842 03 04</span>
-                <span>✉️ remotresch@gmail.com</span>
-                <span>💪 Ausgleich: Kampfsport (MMA) & Krafttraining</span>
+                <span>✉️ remo.tresch@ur.ch</span>
+                <span>💪 Ausgleich: Kampfsport (MMA) & Halbmarathon-Training</span>
             </div>
         </div>
-
         <div class="timeline">
-            <!-- Schichtchef -->
             <div class="timeline-item left">
                 <div class="timeline-content">
                     <span class="timeline-date">November 2024 – Heute</span>
-                    <h4>Schichtchef SVZ</h4>
-                    <p>Operative Führungsverantwortung der Schicht und Koordination externer Partner. Fokus auf lückenlose Einhaltung komplexer Vorschriften (SVG/VTS), Qualitätskontrolle und Rechtssicherheit im Dienstbetrieb.</p>
+                    <h4>Wachtmeister / Schichtchef SVZ</h4>
+                    <p>Operative Führungsverantwortung der Schicht und Koordination externer Partner. Fokus auf lückenlose Einhaltung komplexer Vorschriften, Qualitätskontrolle und Rechtssicherheit.</p>
                 </div>
             </div>
-            
-            <!-- Social Media -->
             <div class="timeline-item right">
                 <div class="timeline-content">
                     <span class="timeline-date">Januar 2026 – Heute (Nebenamt)</span>
                     <h4>Social Media & Content Creator SVZ</h4>
-                    <p>Verantwortlich für den digitalen Auftritt. Eigenständige Konzeption, Dreh und Schnitt von Video-Content, um die polizeiliche Arbeit transparent und modern zu präsentieren.</p>
+                    <p>Verantwortlich für den digitalen Auftritt. Konzeption, Dreh und Schnitt von Video-Content, um die polizeiliche Arbeit transparent und modern zu präsentieren (inkl. technischer Umsetzung).</p>
                 </div>
             </div>
-
-            <!-- Frontpolizist -->
             <div class="timeline-item left">
                 <div class="timeline-content">
                     <span class="timeline-date">Mai 2014 – November 2024</span>
@@ -644,22 +365,18 @@
                     <p>10 Jahre Bereitschafts- und Verkehrspolizei. Erstausrückende Patrouille, operatives Krisenmanagement und Leitung der ersten Einsatzkräfte bei Vorfällen mit hohem Sicherheitspotenzial.</p>
                 </div>
             </div>
-
-            <!-- Verhandler -->
             <div class="timeline-item right">
                 <div class="timeline-content">
                     <span class="timeline-date">Januar 2020 – Dezember 2025 (Nebenamt)</span>
                     <h4>Polizeilicher Verhandler (ZPK)</h4>
-                    <p>Spezialist für Deeskalation und lösungsorientierte Kommunikation. Verhandlungsführung unter Druck und direktes Stakeholder-Management in kritischen Stresssituationen.</p>
+                    <p>Spezialist für Deeskalation und lösungsorientierte Kommunikation. Verhandlungsführung unter Druck in kritischen Stresssituationen.</p>
                 </div>
             </div>
-
-            <!-- PSI Instruktor -->
             <div class="timeline-item left">
                 <div class="timeline-content">
                     <span class="timeline-date">September 2019 – Heute (Nebenamt)</span>
                     <h4>PSI Instruktor</h4>
-                    <p>Zertifizierter Instruktor. Verantwortlich für die jährliche Aus- und Weiterbildung in operativen Sicherheitsmodulen. Befähigung zur klaren Vermittlung komplexer Prozessabläufe.</p>
+                    <p>Zertifizierter Instruktor. Verantwortlich für die jährliche Aus- und Weiterbildung in operativen Sicherheitsmodulen. Didaktisch saubere Vermittlung komplexer Abläufe.</p>
                 </div>
             </div>
         </div>
@@ -669,9 +386,88 @@
         <p>&copy; 2026 Remo Tresch | Bewerbung als Dienstchef Präventionsdienste Kantonspolizei Uri</p>
     </footer>
 
+    <!-- ========================================== -->
+    <!-- MODALS (Pop-ups für die Fachbereiche)      -->
+    <!-- ========================================== -->
+
+    <!-- Modal 1: KBM -->
+    <div id="modal-kbm" class="modal-overlay" onclick="closeModal(event)">
+        <div class="modal-content">
+            <button class="close-modal" onclick="closeModal(event, true)">&times;</button>
+            <div class="modal-header">
+                <div class="modal-icon">🛑</div>
+                <h3 style="color: #fff;">Video-Konzepte: KBM</h3>
+            </div>
+            <div class="modal-body">
+                <h4>Kampagne: "Signal for Help"</h4>
+                <p>Aufklärung über das weltweit bekannte Handzeichen bei häuslicher Gewalt. Betroffene können so unauffällig um Hilfe bitten, wenn der Täter im Raum ist.</p>
+                <ul>
+                    <li><strong>Format:</strong> Emotionales, wortloses Reel/Short.</li>
+                    <li><strong>Message:</strong> "Wir kennen das Zeichen. Wir helfen dir."</li>
+                    <li><strong>Ziel:</strong> Enorme Reichweite durch leichte Teilbarkeit und Sensibilisierung des Umfelds (Nachbarn, Freunde).</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 2: VSI -->
+    <div id="modal-vsi" class="modal-overlay" onclick="closeModal(event)">
+        <div class="modal-content">
+            <button class="close-modal" onclick="closeModal(event, true)">&times;</button>
+            <div class="modal-header">
+                <div class="modal-icon">🚲</div>
+                <h3 style="color: #fff;">Video-Konzepte: VSI</h3>
+            </div>
+            <div class="modal-body">
+                <h4>Gezielte Verkehrsprävention für Jugendliche</h4>
+                <p>Nach direktem Kontakt mit dem Chef VSI wurde mir bestätigt: Das Potenzial für Präventionsvideos in diesem Bereich ist enorm. Die Zielgruppe ist ohnehin digital unterwegs.</p>
+                <ul>
+                    <li><strong>Fahrradwege richtig nutzen:</strong> Ein POV-Video (Point of View) aus Sicht eines E-Bike-Fahrers, das gefährliche Kreuzungen im Kanton Uri erklärt.</li>
+                    <li><strong>Schulstart-Check:</strong> Ein dynamisches "Checklisten"-Reel: Welche Ausrüstung ist für das Kinderfahrrad zwingend obligatorisch?</li>
+                    <li><strong>Ziel:</strong> Schulungsstoff aus dem Klassenzimmer in den digitalen Alltag der Schüler und Eltern verlängern.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 3: Waffenbüro -->
+    <div id="modal-waffen" class="modal-overlay" onclick="closeModal(event)">
+        <div class="modal-content">
+            <button class="close-modal" onclick="closeModal(event, true)">&times;</button>
+            <div class="modal-header">
+                <div class="modal-icon">🛡️</div>
+                <h3 style="color: #fff;">Video-Konzepte: Waffenbüro</h3>
+            </div>
+            <div class="modal-body">
+                <h4>Wissen spannend verpacken</h4>
+                <p>Das Waffenrecht ist oft trocken und komplex. Mit modernen Formaten schaffen wir Aufklärung, ohne bürokratisch zu wirken.</p>
+                <ul>
+                    <li><strong>"Wusstest du schon?"-Serie:</strong> Kurze, knackige Videos zu Neuerungen im Waffen- oder Sprengstoffgesetz.</li>
+                    <li><strong>Sichere Aufbewahrung:</strong> Ein 30-sekündiges Video, das pragmatisch aufzeigt, wie Waffen zu Hause rechtlich korrekt gesichert werden müssen.</li>
+                    <li><strong>Ziel:</strong> Dem Thema die Schwere nehmen, Transparenz schaffen und Unfällen oder strafbaren Handlungen aus Unwissenheit vorbeugen.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript für Quick Exit & Modals -->
     <script>
         function quickExit() {
             window.location.replace("https://www.google.ch/search?q=wetter+uri");
+        }
+
+        function openModal(modalId) {
+            document.getElementById(modalId).classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal(event, forceClose = false) {
+            if (forceClose || event.target.classList.contains('modal-overlay')) {
+                document.querySelectorAll('.modal-overlay').forEach(modal => {
+                    modal.classList.remove('active');
+                });
+                document.body.style.overflow = 'auto';
+            }
         }
     </script>
 </body>
