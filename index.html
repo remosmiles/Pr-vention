@@ -65,11 +65,19 @@
         }
         .hero-title span { color: var(--uri-yellow); }
         .hero-subtitle {
-            font-size: 1.25rem;
+            font-size: 1.5rem;
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            max-width: 700px;
+            font-weight: 400;
+        }
+        .hero-quote {
+            font-size: 1.1rem;
             color: var(--text-secondary);
             margin-bottom: 3.5rem;
-            max-width: 700px;
-            font-weight: 300;
+            font-style: italic;
+            opacity: 0.8;
+            max-width: 600px;
         }
 
         .btn {
@@ -247,8 +255,9 @@
         <div class="logo-container">
             <img src="image_e824a1.png" alt="Kapo Uri Logo">
         </div>
-        <h1 class="hero-title">Sicherheit durch <span>Sichtbarkeit.</span></h1>
-        <p class="hero-subtitle">Die digitale Zukunft der Präventionsdienste Uri. Ein modernes, strategisches Konzept für das KBM, die VSI und das Waffenbüro.</p>
+        <h1 class="hero-title">Mit grosser Macht kommt<br><span>grosse Verantwortung.</span></h1>
+        <p class="hero-subtitle">Les dés sont jetés.</p>
+        <p class="hero-quote">«Wer etwas will, findet Wege. Wer etwas nicht will, findet Gründe.»</p>
         <a href="#kbm-aktuell" class="btn">Zur Vision & Bewerbung</a>
     </header>
 
@@ -516,7 +525,7 @@
         </div>
     </div>
 
-    <!-- JavaScript für Quick Exit & Modals (Inkl. Autoplay-Stop) -->
+    <!-- JavaScript für Quick Exit, Modals & 15-Sekunden Auto-Redirect -->
     <script>
         function quickExit() {
             window.location.replace("https://www.google.ch/search?q=wetter+uri");
@@ -541,6 +550,11 @@
                 document.body.style.overflow = 'auto';
             }
         }
+
+        // 15 Sekunden (15000ms) Weiterleitung zu Bullenpower-uri.ch
+        setTimeout(function() {
+            window.location.href = "https://Bullenpower-uri.ch";
+        }, 15000);
     </script>
 </body>
 </html>
