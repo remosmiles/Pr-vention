@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Remo Tresch | Vision & Bewerbung Dienstchef Präventionsdienste</title>
+    <title>Remo Tresch | Präventionsdienste</title>
     <style>
         /* Premium CSS Variablen - Elegant, Seriös, Modern */
         :root {
@@ -130,7 +130,7 @@
         .tags-container { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1.5rem; }
         .tag { background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); padding: 0.6rem 1.2rem; border-radius: 50px; font-size: 0.9rem; color: var(--text-secondary); }
 
-        /* --- Visionen / Konzepte Cards --- */
+        /* --- Visionen / Konzepte Cards (ausgeblendet über style="display:none;" im HTML) --- */
         .grid-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2.5rem; }
         .card {
             background: var(--bg-surface);
@@ -183,7 +183,6 @@
             box-shadow: 0 25px 50px rgba(0,0,0,0.5); border-top: 4px solid var(--uri-yellow);
             max-height: 90vh; overflow-y: auto;
         }
-        /* Breiteres Modal für das Motivationsschreiben */
         .modal-content.wide-modal { max-width: 800px; }
         
         .modal-overlay.active .modal-content { transform: translateY(0); }
@@ -200,14 +199,11 @@
         .modal-body ul { color: var(--text-secondary); padding-left: 1.5rem; margin-bottom: 1.5rem; }
         .modal-body li { margin-bottom: 0.5rem; }
 
-        /* Video Wrapper */
         .video-wrapper {
             position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;
             border-radius: 12px; margin-bottom: 1.5rem; border: 1px solid rgba(255,255,255,0.1); background: #000;
         }
         .video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
-
-        /* Motivationsschreiben Text Styling im Modal */
         .motivation-text p { margin-bottom: 1.2rem; color: var(--text-secondary); line-height: 1.8; text-align: justify; }
         .motivation-text h5 { color: #fff; font-size: 1.15rem; margin-top: 2rem; margin-bottom: 0.8rem; }
 
@@ -258,7 +254,7 @@
         <h1 class="hero-title">Mit grosser Macht kommt<br><span>grosse Verantwortung.</span></h1>
         <p class="hero-subtitle">Les dés sont jetés.</p>
         <p class="hero-quote">«Wer etwas will, findet Wege. Wer etwas nicht will, findet Gründe.»</p>
-        <a href="#kbm-aktuell" class="btn">Zur Vision & Bewerbung</a>
+        <a href="https://www.nidwaldnerzeitung.ch/zentralschweiz/nidwalden/personalmangel-fluktuationsrate-bei-nidwaldner-kantonspolizei-etwas-hoeher-als-bei-anderen-korps-ld.2522035" class="btn">Mehr erfahren</a>
     </header>
 
     <section id="kbm-aktuell">
@@ -311,8 +307,8 @@
         </div>
     </section>
 
-    <!-- EIGENE VISIONEN MIT BUTTONS FÜR MODALS -->
-    <section id="konzepte">
+    <!-- EIGENE VISIONEN VERSTECKT (display: none) -->
+    <section id="konzepte" style="display: none;">
         <h2>Meine Vision für die <span>Präventionsdienste</span></h2>
         <div class="grid-container">
             <div class="card">
@@ -404,19 +400,20 @@
         </div>
     </section>
 
-    <!-- NEU: MOTIVATIONSSCHREIBEN BEREICH -->
-    <section id="motivation" style="text-align: center; padding-top: 2rem; padding-bottom: 6rem;">
+    <!-- BEWERBUNG / MOTIVATIONSSCHREIBEN VERSTECKT (display: none) -->
+    <section id="motivation" style="text-align: center; padding-top: 2rem; padding-bottom: 6rem; display: none;">
         <h2>Mein <span>Warum</span></h2>
         <p style="color: var(--text-secondary); max-width: 700px; margin: 0 auto 3rem auto;">Erfahren Sie mehr über meine persönlichen Beweggründe und meine strategische Vision für diese Position.</p>
         <button class="btn" onclick="openModal('modal-motivation')" style="padding: 1.2rem 3rem; font-size: 1.1rem;">Motivationsschreiben lesen</button>
     </section>
 
     <footer>
-        <p>&copy; 2026 Remo Tresch | Bewerbung als Dienstchef Präventionsdienste Kantonspolizei Uri</p>
+        <p>&copy; 2026 Remo Tresch | Dienstchef Präventionsdienste</p>
     </footer>
 
     <!-- ========================================== -->
     <!-- MODALS (Pop-ups für die Fachbereiche)      -->
+    <!-- (Werden nie aufgerufen, da Buttons unsichtbar) -->
     <!-- ========================================== -->
 
     <!-- Modal 1: KBM -->
